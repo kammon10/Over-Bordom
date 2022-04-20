@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import './Form'
-import {getData} from '../../apiCalls'
+import {getData, getDataByType} from '../../apiCalls'
 
 
 class Form extends Component {
@@ -15,19 +15,30 @@ class Form extends Component {
           this.setState({catagory: event.target.value})
      }
 
-     getRandomActivity = () => {
+     getRandomActivity = (event) => {
+          event.preventDefault()
+          this.state.catagory === 'all' ? 
            getData()
-          .then(data => this.setState({idea: data}))
+          .then(data => this.props.addIdea(data)) : 
+           getDataByType(this.state.catagory)
+          .then(data => this.props.addIdea(data))
+          
      }
      render() {
           return(
                <form>
-                    <select name='catagory' onClick={event => this.updateState(event)}>
+                    <select name='catagory' onChange={event => this.updateState(event)} required>
+                         <option value=''>Choose a catagory</option>
                          <option value='education'>Education</option>
-                         <option value='relax'>Relax</option>
+                         <option value='social'>Social</option>
+                         <option value='music'>Music</option>
                          <option value='recreational'>Recreational</option>
+                         <option value='charity'>Charity</option>
+                         <option value='cooking'>Cooking</option>
+                         <option value='busywork'>Busy Work</option>
+                         <option value='all'>All</option>
                     </select>
-                    <button>Submit</button>
+                    <button onClick={event => this.getRandomActivity(event)}>Submit</button>
                </form>
           )
      }

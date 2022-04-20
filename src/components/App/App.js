@@ -2,7 +2,8 @@ import React, {Component} from 'react'
 import './App.css'
 import Form from '../Form/Form'
 import Header from '../Header/Header'
-
+import PrimaryCard from '../PrimaryCard/PrimaryCard'
+import { Route, Switch } from "react-router-dom";
 class App extends Component {
      constructor() {
           super()
@@ -24,11 +25,18 @@ class App extends Component {
      }
 
      render() {
-          console.log(this.state.allIdeas)
+          
           return(
                <main>
-                   <PrimaryCard idea={this.findIdea()}/>
-     
+               
+                    <Header />
+
+                    <Switch>
+                         <Route exact path="/" component={ Form }/>
+
+                         
+                    </Switch>
+                    
 
                </main>
 
