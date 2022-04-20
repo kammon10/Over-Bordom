@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import 'App.css'
+import './App.css'
 import Form from '../Form/Form'
 import Header from '../Header/Header'
 
@@ -8,15 +8,26 @@ class App extends Component {
           super()
           this.state = {
                allIdeas: [],
+               primaryIdea: '',
                favorites: [],
                completed: []
           }
      }
+
+     componentDidMount() {
+         
+     }
+
+     addIdea = (idea) => {
+          this.setState({allIdeas: [...this.state.allIdeas, idea]})
+          this.setState({primaryIdea: idea})
+     }
+
      render() {
+          console.log(this.state.allIdeas)
           return(
                <main>
-                    <Header />
-                    <Form />
+                   <PrimaryCard idea={this.findIdea()}/>
      
 
                </main>

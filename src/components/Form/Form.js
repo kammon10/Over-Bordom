@@ -1,15 +1,23 @@
 import React, {Component} from 'react'
 import './Form'
+import {getData} from '../../apiCalls'
+
 
 class Form extends Component {
      constructor() {
           super()
           this.state = {
-               catagory: ''
+               catagory: '',
+               idea: ''
           }
      }
      updateState = (event) => {
           this.setState({catagory: event.target.value})
+     }
+
+     getRandomActivity = () => {
+           getData()
+          .then(data => this.setState({idea: data}))
      }
      render() {
           return(
