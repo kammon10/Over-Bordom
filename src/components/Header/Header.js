@@ -1,12 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import './Header.css'
 
 const Header = () => {
-
+     const location = useLocation()
 
      return(
           <section className='header'>
-               <h1 className='logo'>logo</h1>
+               <Link to='/'>
+                    <h1 className='logo'>logo</h1>
+               </Link>
+               <div className='home'>
+               </div>
                <div className='links'>
                  <Link to='/acceptedChallenges'>
                     <button>Accepted Challenges</button>
