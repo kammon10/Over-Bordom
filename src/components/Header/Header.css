@@ -1,0 +1,21 @@
+.header {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1%;
+     background-color: rgb(28, 88, 71);
+     min-width: 100vw;
+
+}
+
+button {
+    margin: 1vw;
+    height: 5vh;
+    border: none;
+    background-color: rgb(210, 210, 40);
+    color: rgb(38, 18, 18);
+    border-radius: 10px;
+   min-width: 13vw;
+}
+

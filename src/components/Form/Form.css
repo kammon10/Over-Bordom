@@ -1,0 +1,21 @@
+form {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     max-width: 30vw;
+     padding: 5vh 10vw 10vh 10vw;
+     margin-top: 10vh;
+     background-color: rgb(210, 210, 40);
+
+}
+
+select {
+background-color: rgb(229, 242, 158);
+min-width: 20vw;
+min-height: 5vh;
+}
+
+.submit {
+     background-color: rgb(28, 88, 71);
+     color: white;
+}

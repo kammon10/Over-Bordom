@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
-import './Form'
+import './Form.css'
 import {getData, getDataByType} from '../../apiCalls'
+import { Link } from "react-router-dom";
 
 
 class Form extends Component {
@@ -11,6 +12,7 @@ class Form extends Component {
                idea: ''
           }
      }
+     
      updateState = (event) => {
           this.setState({catagory: event.target.value})
      }
@@ -22,13 +24,16 @@ class Form extends Component {
           .then(data => this.props.addIdea(data)) : 
            getDataByType(this.state.catagory)
           .then(data => this.props.addIdea(data))
+
           
      }
      render() {
+
           return(
                <form>
+                    <h1>Choose your challenge!</h1>
                     <select name='catagory' onChange={event => this.updateState(event)} required>
-                         <option value=''>Choose a catagory</option>
+                         <option value=''>Choose a category</option>
                          <option value='education'>Education</option>
                          <option value='social'>Social</option>
                          <option value='music'>Music</option>
@@ -38,7 +43,10 @@ class Form extends Component {
                          <option value='busywork'>Busy Work</option>
                          <option value='all'>All</option>
                     </select>
-                    <button onClick={event => this.getRandomActivity(event)}>Submit</button>
+                    <Link to={'/activityCard'}>
+                         <button className='submit'onClick={event => this.getRandomActivity(event)}>Submit</button>
+                    </Link>
+                   
                </form>
           )
      }

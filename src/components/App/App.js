@@ -1,16 +1,16 @@
 import React, {Component} from 'react'
 import './App.css'
+import { Route, Switch } from "react-router-dom";
 import Form from '../Form/Form'
 import Header from '../Header/Header'
 import PrimaryCard from '../PrimaryCard/PrimaryCard'
-import { Route, Switch } from "react-router-dom";
 class App extends Component {
      constructor() {
           super()
           this.state = {
                allIdeas: [],
                primaryIdea: '',
-               favorites: [],
+               chalangeExcepted: [],
                completed: []
           }
      }
@@ -20,6 +20,7 @@ class App extends Component {
      }
 
      addIdea = (idea) => {
+          console.log(idea)
           this.setState({allIdeas: [...this.state.allIdeas, idea]})
           this.setState({primaryIdea: idea})
      }
@@ -27,17 +28,21 @@ class App extends Component {
      render() {
           
           return(
-               <main>
-               
+               <main className='app'>  
                     <Header />
-
                     <Switch>
-                         <Route exact path="/" component={ Form }/>
-
-                         
-                    </Switch>
-                    
-
+                         <Route 
+                         path='/' 
+                         render={() => {
+                              return <Form addIdea={this.addIdea}/>
+                              
+                         }}/>
+                         <Route path='/activityCard' 
+                         render={() => {
+                              return <PrimaryCard idea={this.state.primaryIdea}/>
+                         }}  
+                        />
+                    </Switch>       
                </main>
 
           )

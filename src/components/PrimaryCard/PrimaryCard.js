@@ -1,15 +1,19 @@
+import { Link} from "react-router-dom";
 
 const PrimaryCard = ({idea}) => {
-
+     console.log(idea)
      return(
-          <div>
+          <div id={idea.id}>
                <h2>{idea.activity}</h2>
                <p>Participants:{idea.participants}</p>
                <p>type: {idea.type}</p>
-               {/* <link href={idea.link}>{idea.link}</link> */}
                <div>
-                    <button>Except Challange</button>
+               <Link to={`/challengeExcepted`}>
+                    <button onClick={event => this.props.addChallange(event)}>Except Challenge</button>
+               </Link>
+               <Link to={`/`}>
                     <button>Find Another Challange</button>
+               </Link>
                </div>
           </div>
      )
