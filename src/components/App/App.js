@@ -13,7 +13,7 @@ class App extends Component {
                catagory: '',
                allIdeas: [],
                primaryIdea: '',
-               acceptedIdeas: [],
+               acceptedChallenges: [],
                completed: []
           }
      }
@@ -38,12 +38,9 @@ class App extends Component {
      }
 
      acceptChallenge = (idea) => {
-          this.setState({acceptedChallenges: [...this.acceptedChallenged, idea]})
+          this.setState({acceptedChallenges: [...this.state.acceptedChallenges, idea]})
      }
 
-     acceptIdea = (idea) => {
-          this.setState({acceptedIdeas: [...this.state.acceptedIdeas, idea]})
-     } 
 //////work with this idea tomorrow//////
      // addIdea = (theState , idea) => {
      //      console.log(this.state)
