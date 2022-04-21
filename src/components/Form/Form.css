@@ -5,17 +5,20 @@ form {
      max-width: 30vw;
      padding: 5vh 10vw 10vh 10vw;
      margin-top: 10vh;
-     background-color: rgb(210, 210, 40);
+     background-color: rgb(183, 178, 21);
+    box-shadow: 5px 1px 18px 0px #515c56;
+    border-radius: 10px;
 
 }
 
 select {
-background-color: rgb(229, 242, 158);
-min-width: 20vw;
-min-height: 5vh;
+     background-color: rgb(238, 226, 193);
+     min-width: 20vw;
+     min-height: 5vh;
 }
 
 .submit {
-     background-color: rgb(28, 88, 71);
+     background-color: rgb(103, 116, 82);
      color: white;
 }
+

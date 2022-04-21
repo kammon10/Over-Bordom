@@ -43,7 +43,7 @@ class Form extends Component {
                          <option value='busywork'>Busy Work</option>
                          <option value='all'>All</option>
                     </select>
-                    <Link to={'/activityCard'}>
+                    <Link to='/activityCard'>
                          <button className='submit'onClick={event => this.getRandomActivity(event)}>Submit</button>
                     </Link>
                    

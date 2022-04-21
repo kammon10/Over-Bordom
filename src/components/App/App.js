@@ -30,6 +30,7 @@ class App extends Component {
           return(
                <main className='app'>  
                     <Header />
+                    
                     <Switch>
                          <Route 
                          path='/' 
@@ -38,11 +39,11 @@ class App extends Component {
                               
                          }}/>
                          <Route path='/activityCard' 
-                         render={() => {
-                              return <PrimaryCard idea={this.state.primaryIdea}/>
-                         }}  
+                         render={() => <PrimaryCard idea={this.state.primaryIdea}/>
+                         }  
                         />
-                    </Switch>       
+                    </Switch>  
+                    
                </main>
 
           )
