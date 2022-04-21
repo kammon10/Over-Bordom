@@ -20,12 +20,12 @@ class App extends Component {
      }
 
      
-
+//////work with this idea tomorrow//////
      addIdea = (theState, idea) => {
           this.setState({[theState]: [...this.setState[theState], idea]})
           console.log(this.state)
      }
-
+//////////////////////////////////////////////////
      removeIdea = (id) => {
           const badIdea = this.state.acceptedChallenges.filter(idea => idea.id !== id)
           this.setState({acceptedChallenges: badIdea})
