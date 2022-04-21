@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import './Form.css'
-import {getData, getDataByType} from '../../apiCalls'
 import { Link } from "react-router-dom";
 
 
@@ -8,23 +7,20 @@ class Form extends Component {
      constructor() {
           super()
           this.state = {
-               catagory: '',
-               idea: ''
+               type: '',
           }
      }
      
      updateState = (event) => {
-          this.setState({catagory: event.target.value})
+          this.setState({type: event.target.value})
      }
 
      getRandomActivity = (event) => {
-        
           event.preventDefault()
-          this.state.catagory === 'all' ? 
-           getData()
-          .then(data => this.props.addIdea(data)) : 
-           getDataByType(this.state.catagory)
-          .then(data => this.props.addIdea(data))
+               const newIdea = this.state
+               console.log(newIdea)
+               this.props.getNewIdea(newIdea)
+         
 
           
      }

@@ -4,13 +4,16 @@ import { Route, Switch } from "react-router-dom";
 import Form from '../Form/Form'
 import Header from '../Header/Header'
 import PrimaryCard from '../PrimaryCard/PrimaryCard'
+import {getData, getDataByType} from '../../apiCalls'
+
 class App extends Component {
      constructor() {
           super()
           this.state = {
+               catagory: '',
                allIdeas: [],
                primaryIdea: '',
-               acceptedChallenges: [],
+               acceptedIdeas: [],
                completed: []
           }
      }
@@ -19,13 +22,28 @@ class App extends Component {
          
      }
 
+     getNewIdea = (newIdea) => {
+          console.log(newIdea)
+           newIdea.type === 'all' ? 
+           getData()
+          .then(data => this.addIdea(data)) : 
+           getDataByType(newIdea.type)
+          .then(data => this.addIdea(data))
+          .then(data => console.log(data))         
+     } 
+
      addIdea = (idea) => {
+          console.log(idea)
           this.setState({primaryIdea: idea})
      }
 
      acceptChallenge = (idea) => {
           this.setState({acceptedChallenges: [...this.acceptedChallenged, idea]})
      }
+
+     acceptIdea = (idea) => {
+          this.setState({acceptedIdeas: [...this.state.acceptedIdeas, idea]})
+     } 
 //////work with this idea tomorrow//////
      // addIdea = (theState , idea) => {
      //      console.log(this.state)
@@ -50,12 +68,12 @@ class App extends Component {
                          exact path='/' 
                          render={() => {
                               return (
-                              <Form addIdea={this.addIdea}/>
+                              <Form getNewIdea={this.getNewIdea}/>
                               )
                          }}/>
-                         <PrimaryCard idea={this.state.primaryIdea} addIdea={this.acceptChallenge}/>
+                         <PrimaryCard idea={this.state.primaryIdea} addIdea={this.acceptChallenge} getNewIdea={this.getNewIdea}/>
                          <Route exact path='/activityCard' 
-                         render={() => <PrimaryCard idea={this.state.primaryIdea} addIdea={this.addIdea}/>
+                         render={() => <PrimaryCard idea={this.state.primaryIdea} addIdea={this.addIdea} />
                          }  
                         />
                </main>
