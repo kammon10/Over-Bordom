@@ -10,7 +10,7 @@ class App extends Component {
           this.state = {
                allIdeas: [],
                primaryIdea: '',
-               challangeAccepted: [],
+               acceptedChallenges: [],
                completed: []
           }
      }
@@ -19,14 +19,17 @@ class App extends Component {
          
      }
 
-     addIdea = (idea) => {
-          console.log(idea)
-          this.setState({allIdeas: [...this.state.allIdeas, idea]})
-          this.setState({primaryIdea: idea})
+     
+
+     addIdea = (theState, idea) => {
+          this.setState({[theState]: [...this.setState[theState], idea]})
+          console.log(this.state)
      }
 
-     acceptChallenge = (idea) => {
-          this.setState({challangeAccepted: [...this.state.challangeAccepted, idea]})
+     removeIdea = (id) => {
+          const badIdea = this.state.acceptedChallenges.filter(idea => idea.id !== id)
+          this.setState({acceptedChallenges: badIdea})
+          console.log(this.state.acceptedChallenges)
      }
 
      render() {
@@ -34,7 +37,7 @@ class App extends Component {
           return(
                <main className='app'>  
                     <Header />
-                    
+                    <PrimaryCard idea={this.state.primaryIdea} addIdea={this.acceptChallenge}/>
                     <Switch>
                          <Route 
                          path='/' 
