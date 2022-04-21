@@ -5,6 +5,7 @@ import Form from '../Form/Form'
 import Header from '../Header/Header'
 import PrimaryCard from '../PrimaryCard/PrimaryCard'
 import {getData, getDataByType} from '../../apiCalls'
+import CardBox from '../CardBox/CardBox'
 
 class App extends Component {
      constructor() {
@@ -49,8 +50,8 @@ class App extends Component {
      //      console.log(this.state)
      // }
 //////////////////////////////////////////////////
-     removeIdea = (id) => {
-          const badIdea = this.state.acceptedChallenges.filter(idea => idea.id !== id)
+     removeIdea = (idea) => {
+          const badIdea = this.state.acceptedChallenges.filter(thing => thing.key !== idea.key)
           this.setState({acceptedChallenges: badIdea})
           console.log(this.state.acceptedChallenges)
      }
@@ -72,6 +73,14 @@ class App extends Component {
                          <Route exact path='/activityCard' 
                          render={() => <PrimaryCard idea={this.state.primaryIdea} addIdea={this.addIdea} />
                          }  
+                        />
+                        <Route
+                        exact path='/completedIdeas'
+                        render={() => <CardBox ideas={this.state.completed}/>}
+                        />
+                          <Route
+                        exact path='/acceptedChallenges'
+                        render={() => <CardBox ideas={this.state.acceptedChallenges}/>}
                         />
 
                         

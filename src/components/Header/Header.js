@@ -8,10 +8,10 @@ const Header = () => {
           <section className='header'>
                <h1 className='logo'>logo</h1>
                <div className='links'>
-                 <Link to='/'>
+                 <Link to='/acceptedChallenges'>
                     <button>Accepted Challenges</button>
                  </Link> 
-                    <Link to='/'>
+                    <Link to='/completedIdeas'>
                     <button>Completed Challenges</button>
                  </Link>   
                </div>
