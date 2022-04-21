@@ -10,7 +10,7 @@ class App extends Component {
           this.state = {
                allIdeas: [],
                primaryIdea: '',
-               chalangeExcepted: [],
+               challangeAccepted: [],
                completed: []
           }
      }
@@ -23,6 +23,10 @@ class App extends Component {
           console.log(idea)
           this.setState({allIdeas: [...this.state.allIdeas, idea]})
           this.setState({primaryIdea: idea})
+     }
+
+     acceptChallenge = (idea) => {
+          this.setState({challangeAccepted: [...this.state.challangeAccepted, idea]})
      }
 
      render() {
@@ -39,7 +43,7 @@ class App extends Component {
                               
                          }}/>
                          <Route path='/activityCard' 
-                         render={() => <PrimaryCard idea={this.state.primaryIdea}/>
+                         render={() => <PrimaryCard idea={this.state.primaryIdea} addIdea={this.acceptChallenge}/>
                          }  
                         />
                     </Switch>  
