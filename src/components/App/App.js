@@ -73,6 +73,8 @@ class App extends Component {
                          render={() => <PrimaryCard idea={this.state.primaryIdea} addIdea={this.addIdea} />
                          }  
                         />
+
+                        
                </main>
                </Switch>  
 
