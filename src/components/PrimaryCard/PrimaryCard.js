@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import './PrimaryCard.css'
 
-const PrimaryCard = ({idea, addIdea}) => {
+const PrimaryCard = ({idea, addIdea,}) => {
  
      
      return(
@@ -10,7 +10,7 @@ const PrimaryCard = ({idea, addIdea}) => {
                <p>Participants:{idea.participants}</p>
                <p>type: {idea.type}</p>
                <div>
-                    <button onClick={event => addIdea({idea})}>Except Challenge</button>
+                    <button onClick={() => addIdea(idea)}>Except Challenge</button>
                <Link to='/'>
                     <button>Find Another Challange</button>
                </Link>

@@ -19,12 +19,20 @@ class App extends Component {
          
      }
 
-     
-//////work with this idea tomorrow//////
-     addIdea = (theState, idea) => {
-          this.setState({[theState]: [...this.setState[theState], idea]})
-          console.log(this.state)
+     addIdea = (idea) => {
+          this.setState({primaryIdea: idea})
      }
+
+     acceptChallenge = (idea) => {
+          this.setState({acceptedChallenges: [...this.acceptedChallenged, idea]})
+     }
+//////work with this idea tomorrow//////
+     // addIdea = (theState , idea) => {
+     //      console.log(this.state)
+     //      console.log(idea)
+     //      this.setState({[theState]: [...this.state[theState], idea]})
+     //      console.log(this.state)
+     // }
 //////////////////////////////////////////////////
      removeIdea = (id) => {
           const badIdea = this.state.acceptedChallenges.filter(idea => idea.id !== id)
@@ -33,25 +41,25 @@ class App extends Component {
      }
 
      render() {
-          
+          console.log(this.state)
           return(
+               <Switch>
                <main className='app'>  
                     <Header />
-                    <PrimaryCard idea={this.state.primaryIdea} addIdea={this.acceptChallenge}/>
-                    <Switch>
                          <Route 
-                         path='/' 
+                         exact path='/' 
                          render={() => {
-                              return <Form addIdea={this.addIdea}/>
-                              
+                              return (
+                              <Form addIdea={this.addIdea}/>
+                              )
                          }}/>
-                         <Route path='/activityCard' 
-                         render={() => <PrimaryCard idea={this.state.primaryIdea} addIdea={this.acceptChallenge}/>
+                         <PrimaryCard idea={this.state.primaryIdea} addIdea={this.acceptChallenge}/>
+                         <Route exact path='/activityCard' 
+                         render={() => <PrimaryCard idea={this.state.primaryIdea} addIdea={this.addIdea}/>
                          }  
                         />
-                    </Switch>  
-                    
                </main>
+               </Switch>  
 
           )
      }

@@ -18,6 +18,7 @@ class Form extends Component {
      }
 
      getRandomActivity = (event) => {
+        
           event.preventDefault()
           this.state.catagory === 'all' ? 
            getData()
