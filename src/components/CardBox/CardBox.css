@@ -1,7 +1,20 @@
 .cardbox-section {
      width: 100vw;
-     background-color: rgb(175, 187, 109);
+     justify-content: center
+}
+
+.cardbox-header {
+     width: 100%;
      display: flex;
      justify-content: center;
+     background-color:rgb(76, 100, 46);
+     box-shadow: rgb(96, 110, 125) 0px 20px 30px -10px;
+     color: rgb(183, 178, 21);
+}
+
+.card-housing {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
 }
 

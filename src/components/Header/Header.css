@@ -4,8 +4,9 @@
      justify-content: space-between;
      align-items: center;
      padding: 1%;
-     background-color: rgb(53, 60, 24);
+     /* background-color: rgb(53, 60, 24); */
      min-width: 100vw;
+     background-image: linear-gradient(rgb(53, 60, 24), rgb(76, 100, 46));
 
 }
 

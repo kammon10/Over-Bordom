@@ -13,12 +13,14 @@ const CardBox = ({ideas, removeIdea, completeIdea, type, message}) => {
           style={type}
      />
     )
-     
-
      return(
           <section className='cardbox-section'>
-               <h1 className='cardbox-header'>{message}</h1>
+               <div className='cardbox-header'>
+               <h1>{message}</h1>
+               </div>
+               <div className='card-housing'>
                {allIdeas}
+               </div>
           </section>
      )
 }
