@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+
 import './PrimaryCard.css'
 
 const PrimaryCard = ({idea, addIdea, getNewIdea}) => {

@@ -1,10 +1,16 @@
 import Card from '../Card/Card'
 import './CardBox.css'
 
-const CardBox = ({ideas}) => {
+const CardBox = ({ideas, removeIdea, completeIdea}) => {
     
      const allIdeas = ideas.map(idea => 
-    console.log(idea.activity)
+     <Card 
+          key={idea.key}
+          activity={idea.activity}
+          type={idea.type}
+          removeIdea={removeIdea}
+          completeIdea={completeIdea}
+     />
     )
      
 
