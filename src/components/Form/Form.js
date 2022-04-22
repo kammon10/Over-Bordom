@@ -18,8 +18,7 @@ class Form extends Component {
      getRandomActivity = (event) => {
           event.preventDefault()
                const newIdea = this.state
-               console.log(newIdea)
-               this.props.getNewIdea(newIdea)
+               this.state.type && this.props.getNewIdea(newIdea)
      }
      render() {
 
