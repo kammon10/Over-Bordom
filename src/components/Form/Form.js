@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import './Form.css'
 import { Link } from "react-router-dom";
-
+import PrimaryCard from '../PrimaryCard/PrimaryCard'
 
 class Form extends Component {
      constructor() {
@@ -20,9 +20,6 @@ class Form extends Component {
                const newIdea = this.state
                console.log(newIdea)
                this.props.getNewIdea(newIdea)
-         
-
-          
      }
      render() {
 

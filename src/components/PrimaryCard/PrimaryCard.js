@@ -1,16 +1,14 @@
 
 import './PrimaryCard.css'
 
-const PrimaryCard = ({idea, addIdea, getNewIdea}) => {
-     console.log(idea)
-     
+const PrimaryCard = ({idea,getNewIdea, acceptChallenge}) => { 
      return(
           <div className='primaryCard'>
                <h2>{idea.activity}</h2>
                <p>Participants:{idea.participants}</p>
                <p>type: {idea.type}</p>
                <div>
-                    <button onClick={() => addIdea(idea)}>Accept Challenge</button>
+                    <button onClick={() => acceptChallenge(idea)}>Accept Challenge</button>
                     <button onClick={() => getNewIdea(idea)}>Find Another Challenge</button>
 
                </div>

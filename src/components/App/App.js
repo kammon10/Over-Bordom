@@ -57,10 +57,11 @@ class App extends Component {
           // console.log('filteredIdeas:',keptIdeas)
      }
      completeIdea = (activity) => {
-      
           const completedChallenge = this.state.acceptedChallenges.filter(challenge => challenge.activity === activity.activity)
           console.log(completedChallenge)
           this.setState({completed: [...this.state.completed, completedChallenge[0]]})
+          const updatedList = this.state.acceptedChallenges.filter(challenge => challenge.activity !== activity.activity)
+          this.setState({acceptedChallenges: updatedList})
      }
 
      render() {
@@ -72,10 +73,10 @@ class App extends Component {
                          exact path='/' 
                          render={() => <Form getNewIdea={this.getNewIdea}/>  
                          }/>
-                         <Route exact path='/activityCard' 
-                         render={() => <PrimaryCard idea={this.state.primaryIdea} addIdea={this.addIdea} />
+                        { this.state.primaryIdea && <Route exact path='/' 
+                         render={() => <PrimaryCard idea={this.state.primaryIdea} addIdea={this.addIdea} acceptChallenge={this.acceptChallenge} getNewIdea={this.getNewIdea}/>
                          }  
-                        />
+                        />}
                         <Route
                         exact path='/completedIdeas'
                         render={() => <CardBox ideas={this.state.completed}/>}
