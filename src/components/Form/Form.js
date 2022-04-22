@@ -18,13 +18,14 @@ class Form extends Component {
      getRandomActivity = (event) => {
           event.preventDefault()
                const newIdea = this.state
-               this.state.type && this.props.getNewIdea(newIdea)
+               this.state.type && this.props.getNewIdea(newIdea) 
+
      }
      render() {
 
           return(
                <form>
-                    <h1>Choose your challenge!</h1>
+                    <h1>Choose your catagory!</h1>
                     <select name='catagory' onChange={event => this.updateState(event)} required>
                          <option value=''>Choose a category</option>
                          <option value='education'>Education</option>

@@ -1,7 +1,7 @@
 import Card from '../Card/Card'
 import './CardBox.css'
 
-const CardBox = ({ideas, removeIdea, completeIdea}) => {
+const CardBox = ({ideas, removeIdea, completeIdea, type, message}) => {
     
      const allIdeas = ideas.map(idea => 
      <Card 
@@ -10,12 +10,14 @@ const CardBox = ({ideas, removeIdea, completeIdea}) => {
           type={idea.type}
           removeIdea={removeIdea}
           completeIdea={completeIdea}
+          style={type}
      />
     )
      
 
      return(
-          <section>
+          <section className='cardbox-section'>
+               <h1 className='cardbox-header'>{message}</h1>
                {allIdeas}
           </section>
      )

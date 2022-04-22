@@ -1,0 +1,7 @@
+.cardbox-section {
+     width: 100vw;
+     background-color: rgb(175, 187, 109);
+     display: flex;
+     justify-content: center;
+}
+

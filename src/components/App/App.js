@@ -11,7 +11,7 @@ class App extends Component {
      constructor() {
           super()
           this.state = {
-               catagory: '',
+               isTrue: false,
                allIdeas: [],
                primaryIdea: '',
                acceptedChallenges: [],
@@ -24,13 +24,12 @@ class App extends Component {
      }
 
      getNewIdea = (newIdea) => {
-          console.log(newIdea)
            newIdea.type === 'all' ? 
            getData()
           .then(data => this.addIdea(data)) : 
            getDataByType(newIdea.type)
           .then(data => this.addIdea(data))
-          .then(data => console.log(data))         
+          .then(data => console.log(data))    
      } 
 
      addIdea = (idea) => {
@@ -74,16 +73,16 @@ class App extends Component {
                          render={() => <Form getNewIdea={this.getNewIdea}/>  
                          }/>
                         { this.state.primaryIdea && <Route exact path='/' 
-                         render={() => <PrimaryCard idea={this.state.primaryIdea} addIdea={this.addIdea} acceptChallenge={this.acceptChallenge} getNewIdea={this.getNewIdea}/>
+                         render={() => <PrimaryCard idea={this.state.primaryIdea} addIdea={this.addIdea} acceptChallenge={this.acceptChallenge} getNewIdea={this.getNewIdea} isTrue={this.state.isTrue}/>
                          }  
                         />}
                         <Route
                         exact path='/completedIdeas'
-                        render={() => <CardBox ideas={this.state.completed}/>}
+                        render={() => <CardBox ideas={this.state.completed} type='completedChallenges' message={'your Completed Challenges'}/>}
                         />
                          <Route
                         exact path='/acceptedChallenges'
-                        render={() => <CardBox ideas={this.state.acceptedChallenges} removeIdea={this.removeIdea} completeIdea={this.completeIdea}/>}
+                        render={() => <CardBox ideas={this.state.acceptedChallenges} removeIdea={this.removeIdea} completeIdea={this.completeIdea} type={'acceptedChallenges'} message={'your Accepted Challenges'}/>}
                         />
                </main>
                </Switch>  
