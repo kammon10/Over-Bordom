@@ -73,7 +73,7 @@ class App extends Component {
                          render={() => <Form getNewIdea={this.getNewIdea}/>  
                          }/>
                         { this.state.primaryIdea && <Route exact path='/' 
-                         render={() => <PrimaryCard idea={this.state.primaryIdea} addIdea={this.addIdea} acceptChallenge={this.acceptChallenge} getNewIdea={this.getNewIdea} isTrue={this.state.isTrue}/>
+                         render={() => <PrimaryCard idea={this.state.primaryIdea} addIdea={this.addIdea} acceptChallenge={this.acceptChallenge} getNewIdea={this.getNewIdea} isTrue={'true'}/>
                          }  
                         />}
                         <Route

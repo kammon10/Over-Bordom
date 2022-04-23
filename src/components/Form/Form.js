@@ -19,14 +19,17 @@ class Form extends Component {
           event.preventDefault()
                const newIdea = this.state
                this.state.type && this.props.getNewIdea(newIdea) 
-
+               this.setState({type: ''})
      }
+
+
+     
      render() {
 
           return(
-               <form>
+               <form className='form'>
                     <h1>Choose your catagory!</h1>
-                    <select name='catagory' onChange={event => this.updateState(event)} required>
+                    <select className='catagory' name='catagory' onChange={event => this.updateState(event)} required>
                          <option value=''>Choose a category</option>
                          <option value='education'>Education</option>
                          <option value='social'>Social</option>
