@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import './Form.css'
 import { Link } from "react-router-dom";
 import PrimaryCard from '../PrimaryCard/PrimaryCard'
@@ -10,23 +10,20 @@ class Form extends Component {
                type: '',
           }
      }
-     
+
      updateState = (event) => {
-          this.setState({type: event.target.value})
+          this.setState({ type: event.target.value })
      }
 
      getRandomActivity = (event) => {
           event.preventDefault()
-               const newIdea = this.state
-               this.state.type && this.props.getNewIdea(newIdea) 
-               this.setState({type: ''})
+          const newIdea = this.state
+          this.state.type && this.props.getNewIdea(newIdea)
+          this.setState({ type: '' })
      }
 
-
-     
      render() {
-
-          return(
+          return (
                <form className='form'>
                     <h1>Choose your catagory!</h1>
                     <select className='catagory' name='catagory' onChange={event => this.updateState(event)} required>
@@ -41,9 +38,9 @@ class Form extends Component {
                          <option value='all'>All</option>
                     </select>
                     <Link to='/activityCard'>
-                         <button className='submit'onClick={event => this.getRandomActivity(event)}>Submit</button>
+                         <button className='submit' onClick={event => this.getRandomActivity(event)}>Submit</button>
                     </Link>
-                   
+
                </form>
           )
      }
