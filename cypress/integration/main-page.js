@@ -14,13 +14,13 @@ describe('Main Page flow', () => {
           })
 
      it('should display a header and form', () => {
-          cy.visit('http://localhost:3000/')
-          .get('.header').contains('logo')
+          cy.visit('http://localhost:3000/Over-Bordom')
+          .get('.header').contains('Over Bordom')
           .get('.form').contains('Choose your catagory!')
      })
 
      it('a user should be able to select and submit a catagory and card should pop up with an idea', () => {
-          cy.visit('http://localhost:3000/')
+          cy.visit('http://localhost:3000/Over-Bordom')
           cy.intercept('GET', 'http://https://www.boredapi.com/api/activity/', interceptData).as('activity')
           .get('.catagory').select('all')
           .get('.submit').click()
@@ -28,7 +28,7 @@ describe('Main Page flow', () => {
      })
 
      it('should only allow a user to select the challange once', () => {
-          cy.visit('http://localhost:3000/')
+          cy.visit('http://localhost:3000/Over-Bordom')
           cy.intercept('GET', 'http://https://www.boredapi.com/api/activity/', interceptData).as('activity')
           .get('.catagory').select('all')
           .get('.submit').click()
@@ -37,7 +37,7 @@ describe('Main Page flow', () => {
      })
 
      it('A user should be able to click on the Accepted Challenges button to see accepted challenges cards', () => {
-          cy.visit('http://localhost:3000/')
+          cy.visit('http://localhost:3000/Over-Bordom')
           cy.intercept('GET', 'http://https://www.boredapi.com/api/activity/', interceptData).as('activity')
           .get('.form').get('.catagory').select('all')
           .get('.submit').click()
@@ -48,7 +48,7 @@ describe('Main Page flow', () => {
 
      it('A user should be able to choose another challange', () => {
             cy.intercept('GET', 'http://https://www.boredapi.com/api/activity/', interceptData).as('activity')
-           cy.visit('http://localhost:3000/')
+           cy.visit('http://localhost:3000/Over-Bordom')
           .get('.form').get('.catagory').select('all')
           .get('.submit').click()
           .get('.primaryCard').get('.newChallenge').click()
@@ -56,7 +56,7 @@ describe('Main Page flow', () => {
 
      it('A user should be able to click on the Completed Challenges button to see all completed challenges', () => {
             cy.intercept('GET', 'http://https://www.boredapi.com/api/activity/', interceptData).as('activity')
-           cy.visit('http://localhost:3000/')
+           cy.visit('http://localhost:3000/Over-Bordom')
            .get('.completed-challenges').click()
            .get('.cardbox-header').contains('your Completed Challenges')
      })
