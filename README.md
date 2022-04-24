@@ -1,6 +1,7 @@
 
 
 # Over-Bordom
+![Screen Shot 2022-04-24 at 2 13 53 PM](https://user-images.githubusercontent.com/48331256/164994824-d752cf8f-2253-423a-aff6-4ab18b22230b.png)
 
 
 
@@ -10,7 +11,6 @@ When an abundance of unwanted free time is on your hands and creativity has utte
 
 ## Motivation
 - Demonstrate an understanding of React, Router, and intercepted testing
-- Utilize acceptance and E2E testing of site and asynchronous JavaScript with Cypress
 - Create a multi-page application with React Router
 
 ## Technology Stack
@@ -27,6 +27,8 @@ then 'npm start'
 ## Features
 A user can accept an idea and add it to their accepted ideas page. Once an idea is completed, the user can save to completed ideas
 ### Main Dashboard
+![Screen Shot 2022-04-24 at 2 14 57 PM](https://user-images.githubusercontent.com/48331256/164994865-0d8c72de-61c7-4aaa-ae44-18b7f8ab5792.png)
+
 A form appears on the main dashboard giving the user an optional category selection or the user can select all categories
 before hitting submit. Once a category is selected a card will display under the form showing a random idea the user can choose to complete. If the user is unhappy with the idea they can choose to generate another idea in the same category or 
 choose a different category.
@@ -37,6 +39,7 @@ Once an Idea is saved. The user can see all accepted Ideas on the corresponding 
 or delete it. 
 
 ### Completed Ideas
+![Screen Shot 2022-04-24 at 2 25 15 PM](https://user-images.githubusercontent.com/48331256/164995151-119db0d8-c744-40d1-8728-91812b03774b.png)
 Once an idea is completed, it will show up on the Completed Ideas page as a record of completed activities. the cards on this page do not have the option to be deleted.
 
 <details>
