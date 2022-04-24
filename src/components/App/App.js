@@ -28,8 +28,7 @@ class App extends Component {
            getData()
           .then(data => this.addIdea(data)) : 
            getDataByType(newIdea.type)
-          .then(data => this.addIdea(data))
-          .then(data => console.log(data))    
+          .then(data => this.addIdea(data))  
      } 
 
      addIdea = (idea) => {
@@ -41,14 +40,6 @@ class App extends Component {
           this.setState({acceptedChallenges: [...this.state.acceptedChallenges, idea]})
      }
 
-//////work with this idea tomorrow//////
-     // addIdea = (theState , idea) => {
-     //      console.log(this.state)
-     //      console.log(idea)
-     //      this.setState({[theState]: [...this.state[theState], idea]})
-     //      console.log(this.state)
-     // }
-//////////////////////////////////////////////////
      removeIdea = (activity) => {
           console.log('activity:', activity.activity)
           const keptIdeas = this.state.acceptedChallenges.filter(idea => idea.activity !== activity.activity)
@@ -57,7 +48,6 @@ class App extends Component {
      }
      completeIdea = (activity) => {
           const completedChallenge = this.state.acceptedChallenges.filter(challenge => challenge.activity === activity.activity)
-          console.log(completedChallenge)
           this.setState({completed: [...this.state.completed, completedChallenge[0]]})
           const updatedList = this.state.acceptedChallenges.filter(challenge => challenge.activity !== activity.activity)
           this.setState({acceptedChallenges: updatedList})

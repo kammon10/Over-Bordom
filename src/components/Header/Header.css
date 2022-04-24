@@ -7,8 +7,8 @@
      /* background-color: rgb(53, 60, 24); */
      min-width: 100vw;
      background-image: linear-gradient(rgb(53, 60, 24), rgb(76, 100, 46));
-
 }
+
 
 button {
      margin: 1vw;
@@ -45,6 +45,9 @@ button:hover {
 
 .logo {
      margin-left: 2vw;
+     color:  rgb(183, 178, 21);
+     text-decoration: none;
+     font-size: 5vh;
 
 }
 
