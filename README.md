@@ -7,7 +7,7 @@
 
 ## Description
 
-When an abundance of unwanted free time is on your hands and creativity has utterly abandoned you, reach for the Over-Boredom app! This app allows a user to chose a category of activity based on their current mood, just select from the dropdown menu and hit submit! An idea based on the chosen category will appear with the option to accept the idea or role the dice and find something else. Feeling especially indecisive? select all categories and find out what happens! You could find yourself planting a tree or giving everyone in your phone a personal ringtone. Once a user has accepted an idea, it will be saved to the accepted Challenges page where the user can view, complete or delete the challenge. Upon completion, the idea will be saved in the completed challenges page as a record of your adventures.
+When an abundance of unwanted free time is on your hands and creativity has utterly abandoned you, reach for the Over-Boredom app! This app allows a user to chose a category of activity based on their current mood, just select from the dropdown menu and hit submit! An idea based on the chosen category will appear with the option to accept the idea or role the dice and find something else. Feeling especially indecisive? select all categories and find out what happens! You could find yourself planting a tree or giving everyone in your phone a personal ringtone. Once a user has accepted an idea, it will be saved to the accepted Ideas page where the user can view, complete or delete the idea. Upon completion, the idea will be saved in the completed Ideas page as a record of your adventures.
 
 ## Motivation
 - Demonstrate an understanding of React, Router, and intercepted testing
