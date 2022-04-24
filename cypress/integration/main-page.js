@@ -15,7 +15,6 @@ describe('Main Page flow', () => {
 
      it('should display a header and form', () => {
           cy.visit('http://localhost:3000/')
-          cy.intercept('GET', 'http://https://www.boredapi.com/api/activity/', interceptData).as('activity')
           .get('.header').contains('logo')
           .get('.form').contains('Choose your catagory!')
      })
