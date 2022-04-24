@@ -21,7 +21,8 @@ When an abundance of unwanted free time is on your hands and creativity has utte
 - ![Cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
 
 ## How to Use
-clone down this repo and install npm
+click [here](salty-breath.surge.sh)
+or clone down this repo and install npm
 then 'npm start'
 
 ## Features
