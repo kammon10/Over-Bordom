@@ -1,9 +1,7 @@
-import { Link } from "react-router-dom";
 import './Card.css'
 
 const Card = ({activity, type, removeIdea, completeIdea, style}) => 
 {
-     console.log(style)
      return(
           <div className='card'>
                <h2>{activity}</h2>
