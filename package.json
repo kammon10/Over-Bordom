@@ -1,7 +1,7 @@
 {
   "name": "done-with-bordom",
   "version": "0.1.0",
-  "homepage": "https://kammon10.github.id/Over-Bordom",
+  "homepage": "https://kammon10.github.io/Over-Bordom",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
