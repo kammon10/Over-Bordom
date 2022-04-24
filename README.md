@@ -23,7 +23,7 @@ When an abundance of unwanted free time is on your hands and creativity has utte
 ## How to Use
 click [here](salty-breath.surge.sh)
 or clone down this repo and install npm
-then 'npm start'
+then run 'npm start'
 
 ## Features
 A user can accept an idea and add it to their accepted ideas page. Once an idea is completed, the user can save to completed ideas
