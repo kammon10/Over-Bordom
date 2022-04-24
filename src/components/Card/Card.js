@@ -8,7 +8,6 @@ const Card = ({activity, type, removeIdea, completeIdea, style}) =>
                <p>{type}</p>
                <div>
                     { style === 'acceptedChallenges' && <><button className='remove-idea-btn' onClick={() => removeIdea({ activity })}>Delete</button><button className='complete-idea-btn' onClick={() => completeIdea({ activity})}>Complete</button></>}
-           
                </div>
           </div>
      )

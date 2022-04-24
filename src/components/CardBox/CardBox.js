@@ -2,7 +2,6 @@ import Card from '../Card/Card'
 import './CardBox.css'
 
 const CardBox = ({ideas, removeIdea, completeIdea, type, message}) => {
-    
      const allIdeas = ideas.map(idea => 
      <Card 
           key={idea.key}
@@ -24,7 +23,5 @@ const CardBox = ({ideas, removeIdea, completeIdea, type, message}) => {
           </section>
      )
 }
-
-//  <Card idea={idea.activity} type={idea.type} key={idea.key}/>
 
 export default CardBox;
