@@ -56,10 +56,10 @@ class App extends Component {
                     <main className='app'>
                          <Header />
                          <Route
-                              exact path='/'
+                              exact path='/Over-Bordom'
                               render={() => <Form getNewIdea={this.getNewIdea} />
                               } />
-                         {this.state.primaryIdea && <Route exact path='/'
+                         {this.state.primaryIdea && <Route exact path='/Over-Bordom'
                               render={() => <PrimaryCard idea={this.state.primaryIdea} addIdea={this.addIdea} acceptChallenge={this.acceptChallenge} getNewIdea={this.getNewIdea} isTrue={'true'} />
                               }
                          />}
