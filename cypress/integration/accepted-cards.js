@@ -15,7 +15,7 @@ describe('Accepted Challenges Page flow', () => {
 
 
      it('should display a header and form', () => {
-         cy.visit('http://localhost:3000/')
+         cy.visit('http://localhost:3000/Over-Bordom')
          cy.intercept('GET', 'http://https://www.boredapi.com/api/activity/', interceptData).as('activity')
           .get('.form').get('.catagory').select('all')
           .get('.submit').click()
@@ -26,7 +26,7 @@ describe('Accepted Challenges Page flow', () => {
      })
 
      it('should be able to complete an idea', () => {
-           cy.visit('http://localhost:3000/')
+           cy.visit('http://localhost:3000/Over-Bordom')
            cy.intercept('GET', 'http://https://www.boredapi.com/api/activity/', interceptData).as('activity')
           .get('.form').get('.catagory').select('all')
           .get('.submit').click()
@@ -39,7 +39,7 @@ describe('Accepted Challenges Page flow', () => {
      })
 
      it('should be able to complete an idea', () => {
-           cy.visit('http://localhost:3000/')
+           cy.visit('http://localhost:3000/Over-Bordom')
            cy.intercept('GET', 'http://https://www.boredapi.com/api/activity/', interceptData).as('activity')
           .get('.form').get('.catagory').select('all')
           .get('.submit').click()
