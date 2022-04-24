@@ -15,7 +15,7 @@ describe('Completed Page flow', () => {
 
 
      it('should display a header and card', () => {
-         cy.visit('http://localhost:3000/')
+         cy.visit('http://localhost:3000/Over-Bordom')
          cy.intercept('GET', 'http://https://www.boredapi.com/api/activity/', interceptData).as('activity')
           .get('.form').get('.catagory').select('all')
           .get('.submit').click()
@@ -28,7 +28,7 @@ describe('Completed Page flow', () => {
      })
 
      it('should not have buttons on the card', () => {
-           cy.visit('http://localhost:3000/')
+           cy.visit('http://localhost:3000/Over-Bordom')
            cy.intercept('GET', 'http://https://www.boredapi.com/api/activity/', interceptData).as('activity')
           .get('.form').get('.catagory').select('all')
           .get('.submit').click()
