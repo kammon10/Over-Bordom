@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import './Form.css'
 import { Link } from "react-router-dom";
 import PrimaryCard from '../PrimaryCard/PrimaryCard'
+import PropTypes from 'prop-types'
+
 
 class Form extends Component {
      constructor() {
@@ -48,3 +50,7 @@ class Form extends Component {
 }
 
 export default Form;
+
+Form.propTypes = {
+     getNewIdea: PropTypes.func
+}

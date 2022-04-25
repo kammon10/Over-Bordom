@@ -1,5 +1,6 @@
 import Card from '../Card/Card'
 import './CardBox.css'
+import PropTypes from 'prop-types'
 
 const CardBox = ({ ideas, removeIdea, completeIdea, type, message }) => {
      const allIdeas = ideas.map(idea =>
@@ -25,3 +26,11 @@ const CardBox = ({ ideas, removeIdea, completeIdea, type, message }) => {
 }
 
 export default CardBox;
+
+CardBox.propTypes = {
+   ideas: PropTypes.array,
+   removeIdea: PropTypes.func,
+   completeIdea: PropTypes.func,  
+   type: PropTypes.string,
+   message: PropTypes.string 
+}

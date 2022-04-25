@@ -1,4 +1,5 @@
 import './Card.css'
+import PropTypes from 'prop-types'
 
 const Card = ({ activity, type, removeIdea, completeIdea, style }) => {
      return (
@@ -14,3 +15,11 @@ const Card = ({ activity, type, removeIdea, completeIdea, style }) => {
 }
 
 export default Card;
+
+Card.propTypes = {
+   activity: PropTypes.string,
+   type: PropTypes.string,
+   removeIdea: PropTypes.func,
+   completeIdea: PropTypes.func,  
+   style: PropTypes.string 
+}

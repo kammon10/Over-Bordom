@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import './PrimaryCard.css'
 
-const PrimaryCard = ({idea,getNewIdea, acceptChallenge, isTrue}) => { 
+const PrimaryCard = ({ idea, getNewIdea, acceptChallenge, isTrue }) => {
      const [accept, setAccept] = useState(false)
      const [addType, setAddType] = useState('')
 
@@ -9,21 +10,15 @@ const PrimaryCard = ({idea,getNewIdea, acceptChallenge, isTrue}) => {
           acceptChallenge(idea)
           setAccept(true)
      }
-    
+
      const newChallenge = () => {
           setAccept(false)
           getNewIdea(idea)
 
 
      }
-     // useEffect(() => {
-     //      handleTypeChange()
-     // })
 
-     // const handleTypeChange = () => {
-     //      idea.type !== addType && setAccept(false)
-     // }
-     return(
+     return (
           <div className='primaryCard'>
                <h2>{idea.activity}</h2>
                <p>Participants:{idea.participants}</p>
@@ -39,3 +34,10 @@ const PrimaryCard = ({idea,getNewIdea, acceptChallenge, isTrue}) => {
 }
 
 export default PrimaryCard;
+
+PrimaryCard.propTypes = {
+     idea: PropTypes.object,
+     getNewIdea: PropTypes.func,
+     acceptChallenge: PropTypes.func,
+     isTrue: PropTypes.bool
+}
