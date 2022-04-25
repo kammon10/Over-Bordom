@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Over-Bordom/static/css/main.3ebe6fc3.css",
-    "main.js": "/Over-Bordom/static/js/main.3b69bcf2.js",
+    "main.css": "/Over-Bordom/static/css/main.464a4ae9.css",
+    "main.js": "/Over-Bordom/static/js/main.a36b2ccb.js",
     "index.html": "/Over-Bordom/index.html",
-    "main.3ebe6fc3.css.map": "/Over-Bordom/static/css/main.3ebe6fc3.css.map",
-    "main.3b69bcf2.js.map": "/Over-Bordom/static/js/main.3b69bcf2.js.map"
+    "main.464a4ae9.css.map": "/Over-Bordom/static/css/main.464a4ae9.css.map",
+    "main.a36b2ccb.js.map": "/Over-Bordom/static/js/main.a36b2ccb.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ebe6fc3.css",
-    "static/js/main.3b69bcf2.js"
+    "static/css/main.464a4ae9.css",
+    "static/js/main.a36b2ccb.js"
   ]
 }
