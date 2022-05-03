@@ -5,8 +5,8 @@ const Header = () => {
 
      return (
           <section className='header'>
-               <NavLink className='logo-nav' to='/Over-Bordom'>
-                    <h1 className='logo'>Over Bordom</h1>
+               <NavLink className='logo-nav' to='/Over-Boredom'>
+                    <h1 className='logo'>Over Boredom</h1>
                </NavLink>
                <div className='home'>
                </div>
